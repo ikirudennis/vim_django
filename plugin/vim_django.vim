@@ -15,6 +15,10 @@ if exists("g:loaded_vim_django")
 endif
 let g:loaded_vim_django = 1
 
+if !has('python')
+	echoerr "Error: the vim_django.vim plugin requires Vim to be compiled with +python"
+	finish
+
 if !exists(":VimDjangoCommandTTemplate")
     command -nargs=0  VimDjangoCommandTTemplate  :call VimDjangoCommandTTemplate()
 endif
