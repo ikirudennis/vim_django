@@ -10,15 +10,16 @@
 " Cache location of settings for each file
 " Find location of css and javascript
 
+if !has('python')
+	" I don't need to be alerted to this every time I start vim.
+	" echoerr "Error: the vim_django.vim plugin requires Vim to be compiled with +python"
+	finish
+endif
+
 if exists("g:loaded_vim_django")
     finish
 endif
 let g:loaded_vim_django = 1
-
-if !has('python')
-	echoerr "Error: the vim_django.vim plugin requires Vim to be compiled with +python"
-	finish
-endif
 
 if !exists(":VimDjangoCommandTTemplate")
     command -nargs=0  VimDjangoCommandTTemplate  :call VimDjangoCommandTTemplate()
