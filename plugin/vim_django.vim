@@ -30,7 +30,7 @@ if !exists(":VimDjangoCommandTApp")
 endif
 
 function VimDjangoCommandTTemplate()
-    exec "CommandT".VimDjangoGetTemplateDirForApp()
+    exec "CommandT".VimDjangoGetTemplateDir()
 endfunction
 
 function VimDjangoCommandTApp()
@@ -76,9 +76,9 @@ endfunction
 python << endpython
 import os
 import vim
-path = os.path.join(os.environ['HOME'], '.vim', 'python')
-if not path in sys.path:
-    sys.path.append(path)
+#path = os.path.join(os.environ['HOME'], '.vim', 'python')
+#if not path in sys.path:
+#    sys.path.append(path)
 vundle_path = os.path.join(os.environ['HOME'], '.vim', 'bundle', 'vim_django', 'python')
 if not vundle_path in sys.path:
     sys.path.append(vundle_path)
