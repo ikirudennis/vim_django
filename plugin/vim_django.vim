@@ -75,7 +75,7 @@ endfunction
 
 python << endpython
 import os
-import vim
+import sys
 #path = os.path.join(os.environ['HOME'], '.vim', 'python')
 #if not path in sys.path:
 #    sys.path.append(path)
